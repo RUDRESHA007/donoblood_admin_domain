@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="demo">
+
+
+    </div>
+</body>
+<script>
+
+    //reciver collection units value
+    const reciving = 4;
+
+    //reciver collection blood group
+    const assigned_blood_group = 'A-'
+
+    //stacks bloodgroups
+    const blood_group = ["A+", "B+", "A-", "B-", "AB+", "AB-", "O+", "O-"];
+
+    //stacks unit
+    const unit = [30, 20, 10, 5, 70, 5, 9, 15];
+
+    blood_group.forEach((e, i) => {
+        if (e == assigned_blood_group) {
+            if (reciving >= unit[i]) {
+                console.log(`${assigned_blood_group} blood group has only ${unit[i]} units`);
+            }
+            else {
+                console.log(blood_group[i] = unit[i] - reciving);
+            }
+
+        }
+
+    })
+
+
+</script>
+
+</html>

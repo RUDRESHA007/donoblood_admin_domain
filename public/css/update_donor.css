@@ -1,0 +1,26 @@
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .donor_section {
+       flex-direction: column;
+       border-bottom: 3rem;
+        
+
+    }
+
+    .donor_registration .fields {
+        display: block;
+        margin: .1rem;
+        padding: .5rem;
+        background-color: aliceblue;
+        width: 100%;
+        font-size: 1.3rem;
+
+    }
+    /* .donor_section .donor_container .fields {
+        visibility:hidden;
+    } */
