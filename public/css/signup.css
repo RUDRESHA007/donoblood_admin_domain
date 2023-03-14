@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -52,12 +61,14 @@
 
 
 .signup_form, .login_form h2 {
-  color: rgb(112, 126, 215);
+  color: rgb(0 35 255);
   text-align: center;
   width: 100%;
   position: relative;
   top: .5rem;
   padding: .5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   /* border-bottom: .3rem solid rgb(93, 234, 32); */
 }
 
@@ -123,12 +134,21 @@ form .form__input:focus {
 
 .row label.lbl_txt {
 
-  position: absolute;
-  color: blue;
-  left: 2rem;
-  margin-bottom: 3rem;
-  transition: .5s ease;
-  /* top: 2.5rem; */
+position: absolute;
+
+color: blue;
+
+left: 2rem;
+
+margin-bottom: 3rem;
+
+transition: .5s ease;
+
+/* top: 2.5rem; */
+
+font-weight: 600;
+
+font-size: .8rem;
 }
 
 .row label.movement {
@@ -161,7 +181,7 @@ form .form__input:focus {
   padding: .5rem;
   border-radius: 30px;
   color: rgb(255 255 255);
-  font-weight: 600;
+  font-weight: 864;
   background-color: rgb(14, 99, 225);
   border: none;
   margin: 1.5em;
@@ -186,6 +206,8 @@ form .form__input:focus {
   width: 100%;
   position: relative;
   bottom: 1.7rem;
+  font-weight: 600;
+  font-size: .8rem;
   text-align: center;
 }
 

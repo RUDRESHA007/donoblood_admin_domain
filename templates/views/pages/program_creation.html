@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="program_creation.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar.html')%>
+
+    <div class="program_creation_sec">
+     <h1>add program</h1>
+        <div class="programs">
+            <div class="success">
+                <h3>
+                    <%= msg %> <i class="fa-regular fa-circle-check"></i>
+                </h3>
+            </div>
+            <form action="/create_program" method='post' class="program_upload">
+                <input type="text" name="program_id"  class="program_name hide"  >
+
+                <div class="fields">
+                    <label for="">Program Headline</label>
+                    <input type="text" name="program_name" class="program_name"  placeholder="enter program name" >
+                </div>
+                <div class="fields">
+                    <label for="">Program Date</label>
+                    <input type="text" name="program_date" class="program_date" placeholder="enter Date" >
+                </div>
+                <div class="fields">
+                    <label for="">Program Location</label>
+                    <textarea name="program_location" class="program_location"  cols="30" rows="3" placeholder="enter Location"></textarea>
+                </div>
+                <div class="fields">
+
+                <input type="submit" value="Upload" class="upload">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script src="success.js"></script>
+
+</html>

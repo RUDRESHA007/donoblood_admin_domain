@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&family=Prompt:ital,wght@0,400;1,300&family=Ubuntu:wght@700&display=swap');
+
+
+*{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+}

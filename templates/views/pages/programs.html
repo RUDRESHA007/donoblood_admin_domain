@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/program.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../partials/navbar.html')%>
+
+        <div class="program_sec">
+            <div class="success">
+                <h3>
+                    <%= msg %><i class="fa-regular fa-circle-check"></i>
+                </h3>
+            </div>
+           
+            <div class="program_list">
+
+                <% data.forEach(function(itm,i){ %>
+                    <form action="/program_list_delete" method="get" class="programs">
+                        <div class="program_details">
+                            <!-- ids -->
+                            <input type="text" name="program_id" class="hide" value=<%=data[i]._id %>>
+                            <input type="text" name="U_id" class="hide" value=<%=data[i].U_id %>>
+
+                            <h2 class="program_name">
+                                <%=data[i].program_name %>
+                            </h2>
+                            <h4 class="program_date"><i class="fa-solid fa-calendar-days"></i> On
+                                <%=data[i].program_date %>
+                            </h4>
+                            <p class="program_location"><i class="fa-solid fa-location-dot"></i> in <%=data[i].program_location %>
+                            </p>
+                        </div>
+                        <div class="btn_sec">
+                            <input type="submit" value="Delete" class="delete btn">
+                        </div>
+
+                    </form>
+                    <% }); %>
+
+            </div>
+        </div>
+
+</body>
+<script src="success.js"></script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="request.css">
+    <title>DONOR REQUEST</title>
+</head>
+
+<body>
+    <%- include('../partials/navbar.html')%>
+
+        <div class="request_sec">
+            <H1>Donors Request</H1>
+            <div class="requests">
+
+                <% data.forEach(function(itm,i){ %>
+                    <div class="success">
+                        <h3>
+                            <%= msg %><i class="fa-regular fa-circle-check"></i>
+                        </h3>
+                    </div>
+                        <form action="/donor_request_approve" method='get' class="card">
+
+                            <div class="fields hide">
+                                <label for="">admin id</label>
+                                <input type="text" name="admin_id" class="admin_id " value="" required readonly>
+                            </div>
+
+
+                            <input type="text" name="u_id" class="hide" value=<%=data[i]._id %> >
+                            <table class="detailes">
+                                <tr class="fields">
+                                    <th>NAME:</th>
+                                    <td>
+                                        <%=data[i].donor_name %>
+                                    </td>
+
+                                </tr>
+                                <tr class="fields">
+                                    <th>DOB:</td>
+                                    <td>
+                                        <%=data[i].date_of_birth %>
+                                    </td>
+
+                                </tr>
+                                <tr class="fields">
+                                    <th>PHONE NO:</td>
+                                    <td>
+                                        <%=data[i].phone %>
+                                    </td>
+
+                                </tr>
+                                <tr class="fields">
+                                    <th>LOCATION:</td>
+                                    <td>
+                                        <%=data[i].address %>
+                                    </td>
+
+                                </tr>
+                                <tr class="fields">
+                                    <th>BLOOD GROUP:</td>
+                                    <td>
+                                        <%=data[i].blood_type %>
+                                    </td>
+
+                                </tr>
+                                <tr class="fields">
+                                    <th>UNIT OF BLOOD:</td>
+                                    <td>
+                                        <%=data[i].unit_of_blood %>
+                                    </td>
+
+                                </tr>
+                               
+
+                            </table>
+                            <div class="status_sec">
+
+                                <button class="Approve status ">approve <i
+                                        class="fa-regular fa-circle-check"></i></button>
+                                <button class="Reject status"><a href=/d_rejection?u_id=<%=data[i]._id %>>Reject</a>   <i class="fa-regular fa-circle-xmark"></i></button>
+
+
+                            </div>
+                        </form>
+                        <!-- <form action="/varify" method="get" class="varify_sec">
+                            <button class="varify status ">Varify <i class="fa-regular fa-circle-check"></i></button>
+                        </form> -->
+                        <% }); %>
+                    </div>
+            </div>
+        </div>
+
+</body>
+<script src="success.js"></script>
+<script src="request.js"></script>
+<script>
+    //session storage
+    var inp = document.querySelectorAll('.admin_id')
+    const mode = sessionStorage.getItem('url');
+    console.log(mode);
+    inp.forEach((e, i) => {
+        e.value = mode;
+    })
+</script>
+</html>

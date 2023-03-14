@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dashbord.css">
+</head>
+
+<body >
+    <div class="nav_"><div class="container ">
+        <div class="nav_tic">
+            <i class="fa-solid fa-xmark"></i><i class="fa-solid fa-bars"></i>
+        </div>
+        <div href="" class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/6374/6374296.png" alt="">
+            <p class="logo_name">DonoBlood</p>
+        </div>
+        <div class="navbar ">
+
+
+
+            <div class="nav_items">
+
+        
+
+                       <!-- stock section -->
+        
+                       <a href="/home" class="stocks_section navbtn"><i class="fa-solid fa-house-medical"></i> Home</a>
+        <!-- request section -->
+        <div class="dropdown navbtn request_section">
+            <a class="dropbtn "><i class="fa-solid fa-user-slash"></i> Requests
+                <i class="fa fa-caret-down"></i>
+            </a>
+
+            <div class="dropdown-content ">
+                <a href="/donor_request" class="by_location"><i class="fa-solid fa-users"></i>
+                   Donor Requests</a>
+
+                <a href="/patient_request" class="by-group"><i class="fa-solid fa-bed-pulse"></i> Patient Request</a>
+                <a href="/donor_varification" class="by-group"><i class="fa-regular fa-cloud-check"></i>donor varification</a>
+                <a href="/patient_varification" class="by-group"><i class="fa-solid fa-cloud-check"></i> Patient varification</a>
+            </div>
+        </div>
+
+
+
+                <!-- donor_section -->
+        
+                <div class="dropdown navbtn donor_section">
+                    <a class="dropbtn"> <i class="fa-solid fa-people-group"></i> donor
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/donor/add_donors" class="add_donor"><i class="fa-solid fa-person-circle-plus"></i> add
+                            donor</a>
+        
+                        <a href="/donor/update_donors" class="update"><i class="fa-solid fa-user-pen"></i> updates</a>
+        
+                        <a href="/donor/donor_details/a" class="donor_details"><i class="fa-solid fa-users-rectangle"></i>
+                            donor details</a>
+                    </div>
+                </div>
+        
+                <!-- donor searching section -->
+        
+                <div class="dropdown navbtn search_section">
+                    <a class="dropbtn "><i class="fa-solid fa-magnifying-glass"></i> donor search
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+        
+                    <div class="dropdown-content ">
+                        <a href="/search_by_location" class="by_location"><i class="fa-solid fa-magnifying-glass-location"></i>
+                            search by
+                            location</a>
+        
+                        <a href="/search_by_blood_group" class="by-group"><i class="fa-solid fa-droplet"></i> search by
+                            blood group</a>
+                    </div>
+                </div>
+        
+         
+        
+                <!-- delete section -->
+        
+                <a href="/reciver" class="delete_section navbtn"><i class="fa-solid fa-bed"></i> Reciver</a>
+
+        
+       <div class="dropdown navbtn program_section">
+                    <a class="dropbtn "><i class="fa-solid fa-user-slash"></i> program
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+        
+                    <div class="dropdown-content ">
+                        <a href="/create_program" class="by_location"><i class="fa-solid fa-square-plus"></i>
+                            Create program</a>
+        
+                        <a href="/program_list" class="by-group"><i class="fa-solid fa-list-check"></i> program list</a>
+                    </div>
+                </div>
+                
+                <!-- logout section -->
+        
+                <a href="/login" class="lagout_section navbtn"><i class="fa-solid fa-right-from-bracket"></i> logout</a>
+        
+            </div>
+        </div>
+    </div></div>body
+    
+  
+    
+</body>
+<script src="navbar.js"></script>
+<script src="slider.js"></script>
+
+</html>
+
+      

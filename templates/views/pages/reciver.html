@@ -1,112 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/add_donor.css">
+        <link rel="stylesheet" href="/navbar.css">
+        <link rel="stylesheet" href="/all_style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/add_donor.css">
-    <link rel="stylesheet" href="/navbar.css">
-
-    <title>home</title>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-
+    
+        <title>home</title>
+    
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
 <body>
+    <%- include('../partials/navbar.html')%>
 
-    <div class="navbar">
-        <div class="nav_items">
-
-            <!-- logo section -->
-
-            <div href="" class="logo"><img src="https://cdn-icons-png.flaticon.com/512/6374/6374296.png" alt=""> Dono
-                Red</div>
-
-            <!-- hospital section -->
-
-            <a href="#home" class="hospital_section navbtn"><i class="fa-solid fa-house-medical"></i> hospital</a>
-
-            <!-- donor_section -->
-
-            <div class="dropdown navbtn donor_section">
-                <a class="dropbtn"> <i class="fa-solid fa-people-group"></i> donor
-                    <i class="fa fa-caret-down"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="/donor/add_donors" class="add_donor"><i class="fa-solid fa-person-circle-plus"></i> add
-                        donor</a>
-
-                    <a href="/donor/update_donors" class="update"><i class="fa-solid fa-user-pen"></i> updates</a>
-
-                    <a href="/donor/donor_details" class="update"><i class="fa-solid fa-users-rectangle"></i> donor details</a>
-                </div>
-            </div>
-
-            <!-- donor searching section -->
-
-            <div class="dropdown navbtn search_section">
-                <a class="dropbtn "><i class="fa-solid fa-magnifying-glass"></i> donor search
-                    <i class="fa fa-caret-down"></i>
-                </a>
-
-                <div class="dropdown-content ">
-                    <a href="/search_by_location" class="by_location"><i class="fa-solid fa-magnifying-glass-location"></i> search by
-                        location</a>
-
-                    <a href="/search_by_blood_group" class="by-group"><i class="fa-solid fa-droplet"></i> search by blood group</a>
-                </div>
-            </div>
-
-            <!-- stock section -->
-
-            <a href="/stocks" class="stocks_section navbtn"><i class="fa-solid fa-hand-holding-droplet"></i> stocks</a>
-
-            <!-- delete section -->
-
-            <a href="/reciver" class="delete_section navbtn"><i class="fa-solid fa-user-slash"></i> blocked donor</a>
-
-            <!-- logout section -->
-
-            <a href="/login" class="lagout_section navbtn"><i class="fa-solid fa-right-from-bracket"></i> logout</a>
-
-        </div>
-    </div>
-
-    <!-- donor section -->
     <div class="donor_section">
+
+
+
+
         <div class="donor_container">
-            <h1 class="hedding">Add Donor</h1>
-            <form action="/home2" method="post" class="donor_registration">
+            <h1 class="hedding">reciver Details</h1>
+            <form action="/add_reciver" method="post" class="donor_registration">
+                <div class="fields" id="hide">
+                    <label for="">admin id</label>
+                    <input type="text" name="admin_id" class="admin_id" value="" required readonly>
+                </div>
                 <div class="fields">
-                    <label for="">donor name</label>
-                    <input type="text" name="d_name"  class="donor_name" placeholder="enter donor name">
+                    <label for="">patient name</label>
+                    <input type="text" name="p_name" class="patient_name" placeholder="enter patient name" >
                 </div>
                 <div class="fields">
                     <label for="">Date of birth</label>
-                    <input name="d_dob" type="date" class="dob">
+                    <input name="p_dob" type="date" class="dob" >
                 </div>
                 <div class="fields">
-                   
-                        <label for="">Adhar Number </label>
-                    <input name="adhar_no" type="text" class="adhar_no" placeholder="enter adhar no">
+                    <label for="">Adhar Number </label>
+                    <input name="p_adhar_no" type="text" class="adhar_no" maxlength="12" placeholder="enter adhar no" >
                 </div>
 
                 <div class="fields">
                     <label for="">phone no</label>
-                    <input name="d_phone" type="text" class="phone number" placeholder="enter phone no ">
+                    <input name="p_phone" type="text" class="phone number" maxlength="10" placeholder="enter phone no " >
                 </div>
                 <div class="fields">
                     <label for="">country</label>
-                    <select  name="d_country" class="country">
+                    <select name="p_country" class="country" >
                         <option value="">select</option>
                         <option value="india">india</option>
                     </select>
                 </div>
                 <div class="fields">
                     <label for="">State</label>
-                    <select name="d_state" class="state">
+                    <select name="p_state" class="state" >
                         <option value="">-- select state --</option>
                         <option value="Andra Pradesh">Andra Pradesh</option>
                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -149,29 +98,55 @@
                 </div>
                 <div class="fields">
                     <label for="">District</label>
-                    <select name="d_district" class="district">
-                        <option value="">-- select district -- </option>
+                    <select name="p_district" class="district">
+                        <option value="" id="placeholder">select district </option>
+                        <option value="Shimoga">Shimoga </option>
                     </select>
                 </div>
 
                 <div class="fields">
                     <label for="">taluk</label>
-                    <select name="d_taluk" class="taluk">
-                        <option value="">-- select taluk -- </option>
+                    <select name="p_taluk" class="taluk">
+                        <option value="" id="placeholder">select taluk </option>
+                        <option value="Badravathi">Badravathi</option>
+                        <option value="Hosanagara">Hosanagara</option>
+                        <option value="Sagar">Sagar</option>
+                        <option value="Shikaripura">Shikaripura</option>
+                        <option value="Shimoga">Shimoga</option>
+                        <option value="Soraba">Soraba</option>
+                        <option value="Theerthahalli">Theerthahalli</option>
                     </select>
                 </div>
                 <div class="fields">
                     <label for=""> Pincode</label>
-                  <input type="text" name="d_pincode" value="" maxlength="6">
+                    <input type="text" name="p_pincode" value="" maxlength="6" >
                 </div>
                 <div class="fields">
                     <label for="">address</label>
-                    <input name="d_address" type="text" class="address" placeholder="enter address ">
+                    <input name="p_address" type="text" class="address" placeholder="enter address " >
+                </div>
+                <div class="fields">
+                    <label for="">What disease are you sufferring?</label>
+                    <input name="disease" type="text" class="disease" placeholder="enter disease type " >
+                </div>
+                <div class="fields">
+                    <label for="">which hospital give treatment for you?</label>
+                    <select name="hospital" class="hospital" >
+                        <option value="">-- select hospital -- </option>
+                        <option value="governament hospiatal">governament hospiatal </option>
+                        <option value="subbaiyya hospital">subbaiyya hospital </option>
+                        <option value="nanjappa helth care ">nanjappa helth care </option>
+                        <option value="sumukha hospital">sumukha hospital </option>
+                        <option value="bagavath hospitaL">bagavath hospitaL </option>
+                        <option value="VIGNESHWARA HOSPITAL">VIGNESHWARA HOSPITAL </option>
+                        
+
+                    </select>
                 </div>
 
                 <div class="fields">
                     <label for="">blood type</label>
-                    <select name="d_blood_type" class="blood_type">
+                    <select name="p_blood_type" class="blood_type" >
                         <option value="">-- select blood type -- </option>
                         <option value="O+">O+ </option>
                         <option value="O-">O- </option>
@@ -185,22 +160,11 @@
                     </select>
                 </div>
                 <div class="fields">
-                    <label for="">unit of blood</label>
-                    <input name="d_blood_unit" type="text" class="d_blood_unit" placeholder="d_blood_unit ">
+                    <label for="">how much blood you want?</label>
+                    <input name="recived_blood_unit" type="number" class="p_blood_unit" placeholder="0 "  >
                 </div>
-
-                <div class="fields ">
-                    <label for="">Did you ever donate blood before?</label>
-                    <div id="radio" class=" radio">
-                        <input type="radio" class="yes" name="radio" value="yes">yes
-                        <input type="radio" class="no" name="radio" value="no">no
-                    </div>
-                </div>
-                <!-- if yes then show date of donetion -->
-
-                <div class="fields old_donate_date ">
-                    <label for="">When was the last time you have donated blood?</label>
-                    <input name="old_blood_doanate_date" type="date" class="date_of_old_donation">
+                <div class="fields">
+                    <input name="status" type="text" class="status"  value="pending"  readonly>
                 </div>
 
 
@@ -210,9 +174,8 @@
                 </div>
 
             </form>
-
         </div>
     </div>
 </body>
-<script src="/add_donor.js"></script>
+
 </html>

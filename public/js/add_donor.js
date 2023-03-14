@@ -11,4 +11,3 @@ b.addEventListener("click", () => {
     old_donate_date.display="none"
 
 })
-

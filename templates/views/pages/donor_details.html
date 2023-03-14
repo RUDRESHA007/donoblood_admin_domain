@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/donor_details.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <!-- <link rel="stylesheet" href="/id_search.css"> -->
+    <link rel="stylesheet" href="/table.css">
+    <link rel="stylesheet" href="/all_style.css">
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+
+<body>
+    <%- include('../partials/navbar.html')%>
+
+
+        <form action='/donor/donor_details/a' method='post' class="donor_container">
+
+            <table class="container1">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Adhar No</p>
+                        </th>
+                        <th>
+                            <p>donate date</p>
+                        </th>
+                        <th>
+                            <p>donor name</p>
+                        </th>
+                        <th>
+                            <p>D O B</p>
+                        </th>
+                        <th>
+                            <p>phone no</p>
+                        </th>
+                        <th>
+                            <p>State</p>
+                        </th>
+                        <th>
+                            <p>District</p>
+                        </th>
+                        <th>
+                            <p>taluk</p>
+                        </th>
+                        <th>
+                            <p>Pincode</p>
+                        </th>
+                        <th>
+                            <p>address</p>
+                        </th>
+                        <th>
+                            <p>blood type</p>
+                        </th>
+                        <th>
+                            <p>blood unit</p>
+                        </th>
+                        <th>
+                            <p>old donate date</p>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="container2">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Adhar No</p>
+                        </th>
+                        <th>
+                            <p>donate date</p>
+                        </th>
+                        <th>
+                            <p>donor name</p>
+                        </th>
+                        <th>
+                            <p>D O B</p>
+                        </th>
+                        <th>
+                            <p>phone no</p>
+                        </th>
+                        <th>
+                            <p>State</p>
+                        </th>
+                        <th>
+                            <p>District</p>
+                        </th>
+                        <th>
+                            <p>taluk</p>
+                        </th>
+                        <th>
+                            <p>Pincode</p>
+                        </th>
+                        <th>
+                            <p>address</p>
+                        </th>
+                        <th>
+                            <p>blood type</p>
+                        </th>
+                        <th>
+                            <p>blood unit</p>
+                        </th>
+                        <th>
+                            <p>old donate date</p>
+                        </th>
+                    </tr>
+                </thead>
+                <% data.forEach(function(itm,i){ %>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <%=data[i].adhar_no %>
+                            </td>
+                            <td>
+                                <%=data[i].donation_date%>
+                            </td>
+
+                            <td>
+                                <%=data[i].donor_name %>
+                            </td>
+                            <td>
+                                <%=data[i].date_of_birth %>
+                            </td>
+
+                            <td>
+                                <%=data[i].phone %>
+                            </td>
+
+                            <td>
+                                <%=data[i].state %>
+                            </td>
+                            <td>
+                                <%=data[i].district %>
+                            </td>
+                            <td>
+                                <%=data[i].taluk %>
+                            </td>
+                            <td>
+                                <%=data[i].pincode %>
+                            </td>
+                            <td>
+                                <%=data[i].address %>
+                            </td>
+                            <td>
+                                <%=data[i].blood_type %>
+                            </td>
+                            <td>
+                                <%=data[i].unit_of_blood %>
+
+                            </td>
+                            <td>
+                                <%=data[i].old_donation_date %>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    <% }); %>
+            </table>
+
+        </form>
+        <div class="print_sec">
+            <button class="print" onclick="window.print()">Print</button>
+        </div>
+</body>
+
+
+</html>

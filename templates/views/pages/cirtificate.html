@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cirtificate.css">
+    <link rel="stylesheet" href="/navbar.css">
+
+    <title>cirtificate</title>
+</head>
+<body>
+    
+<div class="cirtificate_sec">
+    <div class="success">
+        <h3><%= msg %> <i class="fa-regular fa-circle-check"></i></h3>
+    </div>
+    <div class="cirtificate">
+        <img src="https://cdn-icons-png.flaticon.com/512/6374/6374296.png" alt="" class="logo">
+        <div class="header">
+            
+            <h1  style="color:rgb(52, 6, 190)">Malenad Rotary</h1>
+            <h4>B H Road,sagar,shimoga karnataka-577401  | ph-no 9746548564</h4>
+            <h1 style="color:red">Cirtificate of Appreciation</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/6374/6374296.png" alt="" class="logo">
+        </div>
+        <div class="body">
+            <p>Blood donation is a very noble activity and we thank you for being of it.<br>
+                we are pleased to cirtify that
+            </p>
+            <p > Mr./Ms.           
+                 <input type="text" class="donor_name" value=<%= name %> readonly>
+                has  blood for malenad rotary on</p>
+           
+            
+        </div>
+        <div class="footer">
+            <input type="text" class="donate_date" value=<%= donate_date %> readonly>
+                <div class="sign">
+                    <h1 class="signeture"><i class="fa-solid fa-signature"></i></h1>
+                    <h4>Blood bank officer/MSW</h4>
+
+                </div>
+            </div>
+        <div class="btn">  <button class="print" onclick="window.print()">print</button>
+        <button  class="redirect"><a class="a"  href="/donor/add_donors">Back</a> </button></div>
+      
+    </div>
+    </div>
+    
+    
+</body>
+<script src="/success.js"></script>
+
+</html>

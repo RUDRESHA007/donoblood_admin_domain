@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 try{
-  await mongoose.connect('mongodb+srv://power:Rudra007@cluster0.0rgsp.mongodb.net/donoblood?retryWrites=true&w=majority');
+   mongoose.connect('mongodb+srv://power:Rudra007@cluster0.0rgsp.mongodb.net/donoblood?retryWrites=true&w=majority');
    console.log("connection sucessfull")
 }
 catch{  

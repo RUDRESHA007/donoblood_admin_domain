@@ -20,7 +20,7 @@
 			</div>
 			<div class=" signup_form login_form">
 				<h2>SignUp</h2>
-				<form control="" class="form-group" action="/home" method="post">
+				<form control="" class="form-group" action="/signed" method="post">
 					<div class="row">
 						<label for="" class="lbl_txt movement">user name</label>
 						<input type="text" name="username" id="username" class="form__input" 
@@ -33,7 +33,7 @@
 
 						<input type="email" name="email" id="email" class="form__input" 
 							onkeyup="validation()" required>
-							<div class='errors'></div>
+							<div class='errors'><%=msg%></div>
 
 					</div>
 					<div class="row">

@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Yinka Enoch Adedokun">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="signup.css">
+
 	<title>blood</title>
 </head>
 
@@ -20,7 +22,7 @@
 			</div>
 			<div class=" signup_form login_form">
 				<h2>Login</h2>
-				<form control="" class="form-group" action="/home1" method="post">
+				<form control="" class="form-group" action="/home-login" method="post">
 					
 					<div class="row">
 						<label for="" class="lbl_txt movement">Email or Phone No</label>
@@ -39,6 +41,8 @@
 							<div class='errors'></div>
 
 					</div>
+					<p class="error"><%= msg %></p>
+
 				
 					<div class="row">
 						<input type="submit" value="Submit" class="btn">

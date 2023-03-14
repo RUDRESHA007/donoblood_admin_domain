@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/id_search.css">
+
+    <link rel="stylesheet" href="/all_style.css">
+
+    <link rel="stylesheet" href="add_donor.css">
+    <link rel="stylesheet" href="/navbar.css">
+
+    <link rel="stylesheet" href="update_donor.css">
+
+
+
+    <title>home</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <%- include('../partials/navbar.html')%>
+
+
+        <!-- donor section -->
+        <div class="donor_section">
+            <div class="success">
+                <h3>
+                    <%= success %> <i class="fa-regular fa-circle-check"></i>
+                </h3>
+            </div>
+
+            <div class="search_nav">
+                <form method="get" action="/donor/update_donors/details">
+                    <h4>Update Donor</h4>
+                    <input type="text" name="a_id" class="admin_id hide" maxlength="6">
+                    <div class="fields"><label for="">Enter Adhar Number</label>
+
+                        <input type="text" value="" name='_id' class="rotary_name" required>
+                        <p class="error">
+                            <%= msg %>
+                        </p>
+                    </div>
+<button>search</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+</body>
+<script src="/add_donor.js"></script>
+<script src="/idcount.js"></script>
+<script src="/success.js"></script>
+<script>const admin_value = document.querySelector('.admin_id')
+    const admin_id = sessionStorage.getItem('url');
+    admin_value.value = admin_id</script>
+
+</html>

@@ -1,124 +1,267 @@
-body
-{
-  background-image:url('https://img.freepik.com/free-photo/world-diabetes-day-docter-holding-stethoscope-red-heart-wooden-shape_1150-26694.jpg?size=626&ext=jpg&ga=GA1.2.1052283121.1661220737');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+2:wght@500&family=Comfortaa:wght@400;500;700&family=Grand+Hotel&family=Homemade+Apple&family=Montserrat:ital,wght@0,100;0,500;1,300;1,900&family=Nunito:ital,wght@0,300;0,400;1,600&family=Old+Standard+TT&family=Oswald:wght@200;400&family=Poppins:wght@100;300&family=Prompt:ital,wght@0,400;1,300&family=Racing+Sans+One&family=Secular+One&family=Syncopate&family=Ubuntu:wght@700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+body {
   background-repeat: no-repeat;
-  background-position: center;
-  background-size:100%;
-  height: 100vh;
-  width: auto;
+  background-position: center center;
+  background-size: 100%;
+
+  /* width: auto; */
 }
-    *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-      
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  
+}
+
+.container {
+  z-index: 10000;
+  background-color: rgb(255, 106, 0);
+  width: 100%;
+  position: fixed;
+  height: 6.5rem;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.573) 0.1rem 0.1rem .9rem .1rem;
+  overflow: hidden;
+
+}
+
+.navbar {
+  z-index: 10000;
+  background-color: rgb(255, 106, 0);
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  height: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.573) 0.1rem 0.1rem .9rem .1rem;
+
+}
+
+.nav_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 1rem;
+}
+
+.navbar .navbtn {
+  float: left;
+  font-family: Prompt, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 0.6rem .6rem;
+  text-decoration: none;
+  margin: 0.5rem;
+  border-radius: 1.5rem;
+  transition: all 0.5s ease 0s;
+  width: auto;
+  height: auto;
+}
+
+.container .logo {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+  color: white;
+  position: absolute;
+  left: 3rem;
+  background-color: red;
+  z-index: 100000;
+}
+
+.logo .logo_name {
+  font-family: 'Amita', cursive;
+
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  height: 100%;
+  font-size: 1rem;
+  z-index: 1;
+  color: white;
+  right: .5rem;
+  top: 4.4rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+i {
+  font-size: 1rem;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: Prompt, sans-serif;
+  font-weight: 600;
+}
+
+.navbar .navbtn:hover {
+  background-color: rgba(255, 255, 255, 0.647);
+  color: black;
+}
+
+.dropdown:hover .dropbtn {
+  color: black;
+}
+
+.dropdown-content {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 3rem;
+  margin-left: -3.5rem;
+  position: absolute;
+  background-color: rgb(249, 249, 249);
+  min-width: 10rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.592) 0px 0px 0.5rem 0.1rem;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: Prompt, sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-evenly;
+  float: none;
+  color: black;
+  width: 100%;
+  padding: 17px 19px;
+  margin: 0.5rem 1rem;
+  border-radius: 0px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(132, 124, 124, 0.39);
+}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+}
+
+.hide {
+  display: none;
+}
+
+/* @media only screen and (max-width: 1200px) {
+  .navbar .navbtn {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+} */
+
+@media only screen and (max-width: 850px) {
+  .navbar .navbtn {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    /* position: relative; */
+    width: 100%;
+  }
+
+  .container .logo {
+    position: absolute;
+    left: 3rem;
+    top: 0px;
+    z-index: 1000000;
+  }
+
+  .container .nav_tic i {
+    position: absolute;
+    font-size: 1.5rem;
+    color: aliceblue;
+    right: 1rem;
+    padding: 1rem;
+    top: 2rem;
+  }
+
+  .nav_tic .fa-xmark {
+    display: none;
+    position: absolute;
+    transition: all 0.1s ease-in-out 0s;
+  }
+
+  @keyframes xmark {
+    0% {
+      transform: rotate(0deg);
     }
- 
-    
-    .navbar {
-      z-index: 10000;
-      background-color: rgb(0, 0, 0);
-      width: 100%;
-      position: fixed;
-      height: 6.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      text-align: center;
+
+    100% {
+      transform: rotate(90deg);
     }
-    .nav_items{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .navbar .navbtn {
-      float: left;
-      font-size: .9rem;
-      color: rgb(255, 255, 255);
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      margin: 1rem;
-      border-radius: 1.5rem;
-      transition: .5s;
-      width: auto;
-      height: auto;
-    }
-     .logo{
-      width: 5rem;
-      height:5Rem;
-      margin-bottom: 1.5rem;
-      border-radius: 50%;
-       margin-right:2rem;
-       color:white;
-       background-color: red;
-    }
-    
-     .logo img{
-      width: 100%;
-      height:100%;
-    }
-    
-    i{
-      font-size: 1.2rem;
-    }
-    
-    .dropdown {
-    
-      float: left;
-      overflow: hidden;
-    
-    }
-    
-    .navbar .navbtn:hover{
-      background-color: rgba(255, 255, 255, 0.646);
-      color: black;
-    }
-    .dropdown:hover .dropbtn {
-      color: black;
-    }
-    
-    .dropdown-content {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      /* padding: 2rem; */
-      top:4.7rem;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 10rem;
-      border-radius: .3rem;
-      box-shadow: 0px 0px .5rem .1rem  rgba(0, 0, 0, 0.591);
-      z-index: 1;
-    }
-    
-    .dropdown-content a {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: left;
-      float: none;
-      color: black;
-      width: 100%;
-      padding: 17px 19px;
-      margin: 0.5rem 1rem;
-      border-radius: 0;
-      text-decoration: none;
-      text-align: left;
-      /* transition: .2s ease-in; */
-    }
-    /* .dropdown-content a:active {
-      background-color: #ddd;
-    } */
-    
-    .dropdown-content a:hover {
-      background-color: rgba(132, 124, 124, 0.39);
-    }
-    
-    .dropdown:hover .dropdown-content {
-      display: flex;
-    }
-    
+  }
+
+  .navbar {
+    width: 12rem;
+    height: 16rem;
+    right: -400rem;
+    top: 6.7rem;
+    position: absolute;
+    transition: all 0.8s ease 0s;
+  }
+
+  .nav_items {
+    display: block;
+    top: 0.5rem;
+    z-index: 10000;
+    width: 100%;
+    right: -0.1rem;
+  }
+
+  .navbar .navbtn {
+    padding: .7rem 0px;
+    margin: 0px;
+    height: auto;
+    border-radius: 0px;
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .dropdown {
+    z-index: 1;
+  }
+
+  .dropdown .a {
+    top: 4rem;
+    margin-left: -12.5rem;
+    position: absolute;
+  }
+
+  .dropdown .b {
+    margin-left: 3rem;
+    top: 15.5rem;
+  }
+}

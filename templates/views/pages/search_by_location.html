@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/all_style.css">
+
+
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/id_search.css">
+
+
+
+
+
+    <title>home</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <%- include('../partials/navbar.html')%>
+
+
+    <!-- donor section -->
+    <div class="donor_section">
+        <div class="search_nav">
+            <form method="get" action="/search_by_location/details">
+                <h4 >Search By location</h4>
+
+                <input type="text" name="a_id" class="admin_id hide"  maxlength="6" >
+
+                <div class="fields">
+                    <label for="">Enter Pincode</label>
+                  <input type="text" name="d_pincode" value="" maxlength="6" required>
+                                  <p class="error"><%= msg %></p>
+
+                </div><button>search</button>
+            </form>
+
+        </div>
+        
+    </div>
+
+
+</body>
+<script src="/add_donor.js"></script>
+<script src="/idcount.js"></script>
+<script>
+    const admin_value = document.querySelector('.admin_id')
+  const admin_id = sessionStorage.getItem('url');
+  admin_value.value=admin_id
+  console.log(admin_id);
+</script>
+</html>
